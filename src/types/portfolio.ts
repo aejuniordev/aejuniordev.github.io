@@ -3,16 +3,15 @@ import type { Component } from 'vue'
 export interface Profile {
   name: string
   role: string
+  avatar: string
   description: string
 }
 
 export interface Experience {
   id: number
-  // title: string
   company?: string
   startDate: string
   endDate?: string | null
-  // description: string
   type: 'work' | 'education'
 }
 

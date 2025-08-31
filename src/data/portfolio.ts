@@ -7,29 +7,26 @@ import IconEnvelope from '@/components/icons/IconEnvelope.vue'
 
 export const portfolioData: PortfolioData = {
   profile: {
-    name: 'Junior',
+    name: 'Augusto E. Junior',
     role: 'profile.role',
+    avatar: 'https://avatars.githubusercontent.com/u/42114221?v=4',
     description: 'about.description',
   },
   experiences: [
     // {
     //   id: 1,
-    //   title: 'Senior Developer',
-    //   company: 'Tech Company',
+    //   company: 'sample',
     //   startDate: '2022-03',
-    //   endDate: null,
-    //   description: 'Led development of scalable web applications and mentored junior developers.',
+    //   endDate: '2022-04',
     //   type: 'work',
     // },
-    //     {
-    //       id: 4,
-    //       title: 'experience.4.title',
-    //       company: 'Universidade Federal do Oeste do Pará',
-    //       startDate: '2018-01',
-    //       endDate: null,
-    //       description: "experience.4.description",
-    //       type: 'education',
-    //     },
+    // {
+    //   id: 1,
+    //   company: 'sample',
+    //   startDate: '2018-01',
+    //   endDate: null,
+    //   type: 'education',
+    // },
     {
       id: 2,
       company: 'JCM Consultores',

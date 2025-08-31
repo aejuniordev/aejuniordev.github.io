@@ -1,7 +1,20 @@
 <template>
-  <header>
-    <h1>{{ profile.name }}</h1>
-    <div class="subtitle">{{ t(profile.role) }}</div>
+  <header class="profile-header">
+    <div class="profile-pic-container">
+      <img
+        v-if="profile.avatar"
+        :src="profile.avatar"
+        :alt="profile.name"
+        class="profile-pic"
+      >
+      <div v-else class="profile-pic-placeholder">
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+    <div class="profile-info">
+      <h1>{{ profile.name }}</h1>
+      <div class="subtitle">{{ t(profile.role) }}</div>
+    </div>
   </header>
 </template>
 
