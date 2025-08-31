@@ -72,16 +72,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: auto; /* Allow vertical scrolling when content overflows */
+  overflow-y: auto; /* Allow vertical scrolling */
   overflow-x: hidden; /* Hide horizontal scrollbar */
-  scrollbar-width: none; /* Firefox: Hide scrollbar */
-  -ms-overflow-style: none; /* Internet Explorer and Edge: Hide scrollbar */
-  /*overflow: auto; !* scrolling still works *!*/
-  /*overflow-y: hidden; !* Hide vertical scrollbar *!*/
-  /*overflow-x: hidden; !* Hide horizontal scrollbar *!*/
+  scrollbar-width: unset; /* Firefox: Default scrollbar width (auto) */
+  -ms-overflow-style: none; /* IE/Edge: Hide scrollbar */
 }
-
-/* Chrome, Edge, Safari */
+/* Chrome, Safari, Edge: Hide scrollbar */
 body::-webkit-scrollbar {
   display: none;
 }
