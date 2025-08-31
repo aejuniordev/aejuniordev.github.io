@@ -1,12 +1,7 @@
 <template>
   <header class="profile-header">
     <div class="profile-pic-container">
-      <img
-        v-if="profile.avatar"
-        :src="profile.avatar"
-        :alt="profile.name"
-        class="profile-pic"
-      >
+      <img v-if="profile.avatar" :src="profile.avatar" :alt="profile.name" class="profile-pic" />
       <div v-else class="profile-pic-placeholder">
         <i class="fas fa-user"></i>
       </div>
