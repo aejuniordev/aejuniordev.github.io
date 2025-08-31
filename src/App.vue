@@ -1,47 +1,22 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="container">
+    <LanguageSwitcher />
+    <ProfileHeader :profile="data.profile" />
+    <AboutSection :description="data.profile.description" />
+    <ExperienceSection :experiences="data.experiences" />
+    <TechSection :technologies="data.technologies" />
+    <SocialLinks :socials="data.socials" />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script setup lang="ts">
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import ProfileHeader from '@/components/ProfileHeader.vue'
+import AboutSection from '@/components/AboutSection.vue'
+import ExperienceSection from '@/components/ExperienceSection.vue'
+import TechSection from '@/components/TechSection.vue'
+import SocialLinks from '@/components/SocialLinks.vue'
+import { portfolioData } from '@/data/portfolio'
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+const data = portfolioData
+</script>

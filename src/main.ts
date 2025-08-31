@@ -2,5 +2,12 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import i18n from './i18n'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+// Performance optimization
+app.config.performance = false
+
+app.use(i18n)
+app.mount('#app')

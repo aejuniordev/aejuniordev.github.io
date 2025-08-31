@@ -1,35 +1,302 @@
 @import './base.css';
 
+/* Start Main */
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 20px;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.container {
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.section {
+  margin-bottom: 35px;
+  text-align: left;
+}
 
+.section-title {
+  font-size: 0.85em;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    padding: 30px 20px;
   }
+}
+
+/* End Main */
+/* Start Language Switcher */
+
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: #f5f5f5;
+  border-color: #999;
+}
+
+.lang-btn.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+@media (max-width: 600px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* End Language Switcher */
+/* Start ProfileHeader */
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+/* End ProfileHeader */
+/* Start AboutSection */
+
+.description {
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+
+/* End AboutSection */
+/* Start ExperienceSection */
+.experience-item {
+  margin-bottom: 20px;
+  padding: 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.experience-item:hover {
+  background-color: #f5f5f5;
+}
+
+.experience-header {
+  font-size: 0.95em;
+  margin-bottom: 4px;
+}
+
+.experience-title {
+  color: #333;
+  font-weight: 500;
+}
+
+.experience-company {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+.experience-period {
+  color: #999;
+  font-size: 0.85em;
+  margin-bottom: 4px;
+}
+
+.experience-description {
+  margin-top: 8px;
+  padding-top: 8px;
+  color: #666;
+  font-size: 0.85em;
+  line-height: 1.5;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Slide transition */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-enter-from {
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
+}
+
+.slide-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 100px;
+}
+
+.slide-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 100px;
+}
+
+.slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
+}
+
+/* Mobile: Show descriptions by default */
+@media (max-width: 600px) {
+  .experience-item {
+    margin-bottom: 20px;
+  }
+
+  .experience-description {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    max-height: none !important;
+  }
+}
+
+/* For touch devices */
+@media (hover: none) {
+  .experience-item {
+    background-color: transparent;
+  }
+
+  .experience-item:active {
+    background-color: #f5f5f5;
+  }
+}
+/* End ExperienceSection */
+/* Start TechSection */
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-item {
+  background: #e8e8e8;
+  color: #555;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  will-change: transform;
+}
+
+.tech-item:hover {
+  background: #d8d8d8;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .tech-list {
+    gap: 6px;
+  }
+
+  .tech-item {
+    font-size: 0.8em;
+    padding: 3px 10px;
+  }
+}
+/* End TechSection */
+/* Start SocialSection */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  padding-top: 35px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.social-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  border: none;
+  will-change: transform;
+}
+
+.social-link:hover {
+  color: #333;
+  transform: translateY(-2px);
+}
+.social-link svg {
+  width: 24px;
+  height: 24px;
+  display: block; /* evita espaçamento extra */
+}
+
+/* End SocialSection*/
+
+a {
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: #999;
+}
+
+.social-link {
+  border: none;
 }

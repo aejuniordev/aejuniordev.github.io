@@ -1,0 +1,90 @@
+import type { PortfolioData } from '@/types/portfolio'
+
+import IconGitHub from '@/components/icons/IconGitHub.vue'
+import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
+import IconXTwitter from '@/components/icons/IconXTwitter.vue'
+import IconEnvelope from '@/components/icons/IconEnvelope.vue'
+
+export const portfolioData: PortfolioData = {
+  profile: {
+    name: 'Junior',
+    role: 'profile.role',
+    description: 'about.description',
+  },
+  experiences: [
+    // {
+    //   id: 1,
+    //   title: 'Senior Developer',
+    //   company: 'Tech Company',
+    //   startDate: '2022-03',
+    //   endDate: null,
+    //   description: 'Led development of scalable web applications and mentored junior developers.',
+    //   type: 'work',
+    // },
+    //     {
+    //       id: 4,
+    //       title: 'experience.4.title',
+    //       company: 'Universidade Federal do Oeste do Pará',
+    //       startDate: '2018-01',
+    //       endDate: null,
+    //       description: "experience.4.description",
+    //       type: 'education',
+    //     },
+    {
+      id: 2,
+      company: 'JCM Consultores',
+      startDate: '2023-10',
+      endDate: null,
+      type: 'work',
+    },
+    {
+      id: 3,
+      company: 'Skalena ®',
+      startDate: '2022-05',
+      endDate: '2023-03',
+      type: 'work',
+    },
+    {
+      id: 4,
+      company: 'Universidade Federal do Oeste do Pará',
+      startDate: '2018-01',
+      endDate: null,
+      type: 'education',
+    },
+  ],
+  technologies: [
+    'C#',
+    'JavaScript',
+    'TypeScript',
+    'Python',
+    'Dart',
+    'SQL Server',
+    'PostgreSQL',
+    'SQLite',
+    'MongoDB',
+    'Git',
+    'Docker',
+  ],
+  socials: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/aejuniordev',
+      icon: IconGitHub,
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/aejuniordev/',
+      icon: IconLinkedIn,
+    },
+    {
+      name: 'XTwitter',
+      url: 'https://x.com/aejuniordev',
+      icon: IconXTwitter,
+    },
+    {
+      name: 'Email',
+      url: 'mailto:hello@aejunior.dev',
+      icon: IconEnvelope,
+    },
+  ],
+}
