@@ -45,7 +45,7 @@ export const portfolioData: PortfolioData = {
       id: 4,
       company: 'Universidade Federal do Oeste do Pará',
       startDate: '2018-01',
-      endDate: null,
+      endDate: 2026-02,
       type: 'education',
     },
   ],
