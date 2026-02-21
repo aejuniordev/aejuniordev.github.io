@@ -30,7 +30,7 @@ export default {
     4: {
       title: "Bachelor's Degree in Information Systems",
       description:
-        "Bachelor's degree in Information Systems (currently studying), with practical experience in systems development and research and extension projects.",
+        "Bachelor's degree in Information Systems, with practical experience in systems development and research and extension projects.",
     },
   },
   months: {

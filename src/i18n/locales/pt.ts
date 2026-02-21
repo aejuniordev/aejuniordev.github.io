@@ -30,7 +30,7 @@ export default {
     4: {
       title: 'Bacharelado em Sistemas de Informação',
       description:
-        'Bacharel em Sistemas de Informação (Em formação), com experiência prática em desenvolvimento de sistemas e projetos de pesquisa e extensão.',
+        'Bacharel em Sistemas de Informação, com experiência prática em desenvolvimento de sistemas e projetos de pesquisa e extensão.',
     },
   },
   months: {
