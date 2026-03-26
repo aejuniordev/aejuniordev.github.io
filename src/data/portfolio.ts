@@ -4,6 +4,7 @@ import IconGitHub from '@/components/icons/IconGitHub.vue'
 import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
 import IconXTwitter from '@/components/icons/IconXTwitter.vue'
 import IconEnvelope from '@/components/icons/IconEnvelope.vue'
+import IconLattes from '@/components/icons/iconLattes.vue'
 
 export const portfolioData: PortfolioData = {
   profile: {
@@ -89,6 +90,11 @@ export const portfolioData: PortfolioData = {
       name: 'Email',
       url: 'mailto:hello@aejunior.dev',
       icon: IconEnvelope,
+    },
+    {
+      name: 'Lattes',
+      url: 'https://lattes.cnpq.br/3587208929749306',
+      icon: IconLattes,
     },
   ],
 }
