@@ -32,6 +32,12 @@ export default {
       description:
         'Bacharel em Sistemas de Informação, com experiência prática em desenvolvimento de sistemas e projetos de pesquisa e extensão.',
     },
+    5: 
+    {
+      title: "Mestrado em Engenharia Elétrica",
+      description:
+        "Mestrado em Engenharia Elétrica pelo PPGEE, com pesquisa na área de Sistemas de Energia Elétrica, linha de Sistemas Elétricos de Potência.",
+    }
   },
   months: {
     jan: 'Jan',

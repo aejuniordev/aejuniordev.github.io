@@ -48,6 +48,13 @@ export const portfolioData: PortfolioData = {
       endDate: '2026-02',
       type: 'education',
     },
+    {
+      id: 5,
+      company: 'Universidade Federal do Pará',
+      startDate: '2026-03',
+      endDate: null,
+      type: 'education',
+    },
   ],
   technologies: [
     'C#',

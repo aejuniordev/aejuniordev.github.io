@@ -32,6 +32,11 @@ export default {
       description:
         "Bachelor's degree in Information Systems, with practical experience in systems development and research and extension projects.",
     },
+    5: {
+      title: "Master's Degree in Electrical Engineering",
+      description:
+        "Master's degree in Electrical Engineering (PPGEE), with research focused on Electrical Energy Systems and Power Electric Systems.",
+    },
   },
   months: {
     jan: 'Jan',
