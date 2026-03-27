@@ -34,6 +34,7 @@ export const portfolioData: PortfolioData = {
       startDate: '2023-10',
       endDate: null,
       type: 'work',
+      order: 2,
     },
     {
       id: 3,
@@ -41,6 +42,7 @@ export const portfolioData: PortfolioData = {
       startDate: '2022-05',
       endDate: '2023-03',
       type: 'work',
+      order: 1,
     },
     {
       id: 4,
@@ -48,6 +50,7 @@ export const portfolioData: PortfolioData = {
       startDate: '2018-03',
       endDate: '2026-02',
       type: 'education',
+      order: 1,
     },
     {
       id: 5,
@@ -55,6 +58,7 @@ export const portfolioData: PortfolioData = {
       startDate: '2026-03',
       endDate: null,
       type: 'education',
+      order: 2,
     },
   ],
   technologies: [

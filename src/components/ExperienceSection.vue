@@ -9,6 +9,7 @@
         class="experience-item"
         @mouseenter="hoveredId = exp.id"
         @mouseleave="hoveredId = null"
+        @click="toggleHover(exp.id)"
       >
         <div class="experience-header">
           <span class="experience-title">{{ t(`experience.${exp.id}.title`) }}</span>
@@ -35,6 +36,7 @@
         class="experience-item"
         @mouseenter="hoveredId = exp.id"
         @mouseleave="hoveredId = null"
+        @click="toggleHover(exp.id)"
       >
         <div class="experience-header">
           <span class="experience-title">{{ t(`experience.${exp.id}.title`) }}</span>
@@ -67,11 +69,17 @@ const props = defineProps<Props>()
 const { t } = useI18n()
 const hoveredId = ref<number | null>(null)
 
-const workExperiences = computed(() => props.experiences.filter((exp) => exp.type === 'work'))
+const workExperiences = computed(() =>
+  props.experiences.filter((exp) => exp.type === 'work').sort((a, b) => a.order - b.order),
+)
 
 const educationExperiences = computed(() =>
-  props.experiences.filter((exp) => exp.type === 'education'),
+  props.experiences.filter((exp) => exp.type === 'education').sort((a, b) => a.order - b.order),
 )
+
+const toggleHover = (id: number | null) => {
+  hoveredId.value = hoveredId.value === id ? null : id
+}
 
 const formatDate = (dateStr: string): string => {
   const [year, month] = dateStr.split('-')

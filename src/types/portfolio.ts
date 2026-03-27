@@ -13,6 +13,7 @@ export interface Experience {
   startDate: string
   endDate?: string | null
   type: 'work' | 'education'
+  order: number
 }
 
 export interface SocialLink {
