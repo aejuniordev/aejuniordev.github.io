@@ -9,7 +9,7 @@
         class="experience-item"
         @mouseenter="hoveredId = exp.id"
         @mouseleave="hoveredId = null"
-        @click="toggleHover(exp.id)"
+        @touchend.prevent="toggleHover(exp.id)"
       >
         <div class="experience-header">
           <span class="experience-title">{{ t(`experience.${exp.id}.title`) }}</span>
@@ -36,7 +36,7 @@
         class="experience-item"
         @mouseenter="hoveredId = exp.id"
         @mouseleave="hoveredId = null"
-        @click="toggleHover(exp.id)"
+        @touchend.prevent="toggleHover(exp.id)"
       >
         <div class="experience-header">
           <span class="experience-title">{{ t(`experience.${exp.id}.title`) }}</span>
@@ -77,7 +77,7 @@ const educationExperiences = computed(() =>
   props.experiences.filter((exp) => exp.type === 'education').sort((a, b) => a.order - b.order),
 )
 
-const toggleHover = (id: number | null) => {
+const toggleHover = (id: number) => {
   hoveredId.value = hoveredId.value === id ? null : id
 }
 
